@@ -3,67 +3,77 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <h1>MPU Cost Calculator - Demo | MPU FACHZENTRUM</h1>
+    <main class="calculator">
 
-    <p>Calculate the estimated cost of your MPU.</p>
-
-    <div id="progress">
-        Step <span id="step-number">1</span> of 4
-    </div>
-
-    <h2 id="question">Step 1: What is the reason for your MPU?</h2>
-
-    <form id="calculator-form">
-
-        <div id="options">
-
-            <label>
-                <input type="radio" name="reason" value="alcohol">
-                Alcohol
-            </label>
-            <br>
-
-            <label>
-                <input type="radio" name="reason" value="drugs">
-                Drugs or cannabis
-            </label>
-            <br>
-
-            <label>
-                <input type="radio" name="reason" value="points">
-                Points
-            </label>
-            <br>
-
-            <label>
-                <input type="radio" name="reason" value="criminal">
-                Criminal offence
-            </label>
-            <br>
-
-            <label>
-                <input type="radio" name="reason" value="multiple">
-                Multiple reasons
-            </label>
-
+        <div class="intro">
+            <p class="header">COST ESTIMATOR - Demo</p>
+            <h1>Calculate your MPU demo costs</h1>
+            <p>
+                Answer a few questions to receive an estimated overview
+                of the costs related to your MPU.
+            </p>
         </div>
 
-        <p id="message"></p>
+        <div class="progress">
+            <div class="progress-info">
+                <span id="step-label">Step 1 of 4</span>
+                <span id="progress-percent">0%</span>
+            </div>
 
-        <button type="button" id="back-button" disabled>
-            Back
-        </button>
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
 
-        <button type="button" id="next-button">
-            Next
-        </button>
+        <section class="question-card">
 
-    </form>
+            <h2 id="question"></h2>
+            <p id="question-description"></p>
 
-    <p>
-        This calculator provides an estimated cost only.
-        Actual costs may vary depending on your individual situation.
-    </p>
+            <form id="calculator-form">
+
+                <div id="options"></div>
+
+                <p id="message" role="alert"></p>
+
+                <div class="navigation">
+                    <button
+                        type="button"
+                        id="back-button"
+                        class="button secondary"
+                        disabled>
+                        Back
+                    </button>
+
+                    <button
+                        type="button"
+                        id="next-button"
+                        class="button primary">
+                        Next
+                    </button>
+
+                    <button
+                        type="button"
+                        id="restart-button"
+                        class="button secondary"
+                        style="display: none;">
+                        Start again
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <p class="disclaimer">
+            This calculator provides an approximate estimate only.
+            Actual costs may vary depending on your individual circumstances
+            and the providers you choose.
+        </p>
+
+    </main>
+
+   
 
     <script src="script.js"></script>
 
