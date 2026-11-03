@@ -1,50 +1,62 @@
-# MPU Cost Calculator Demo
+MPU Cost Estimator
 
-A simple interactive MPU cost calculator created to get mpu cost demo.
+An interactive web-based calculator that helps users estimate the costs associated with their MPU through a simple, step-by-step questionnaire.
 
-This demo helps users estimate possible MPU-related expenses based on their situation, preparation needs, and abstinence evidence.
+🌐 Live Demo: https://yagpath.github.io/mpu-cost-calculator-demo/
 
-## Features
+📖 Overview
 
-- Step-by-step calculator
-- Different MPU reasons:
-  - Alcohol
-  - Drugs / Cannabis
-  - Points
-  - Criminal offence
-  - Multiple reasons
-- Preparation and abstinence options
-- Estimated cost breakdown
-- Progress indicator
-- Restart calculator option
-- Demo contact buttons with a funny ULTRON message
-- Responsive layout for desktop and mobile
+The MPU Cost Estimator is designed to make cost estimation easier and more transparent. Users answer a series of questions about their requirements and receive an estimated overview of the costs related to their MPU.
 
-## Technologies Used
+The application follows a guided, four-step process to make the estimation experience simple and user-friendly.
 
-- HTML
-- CSS
-- JavaScript
+✨ Features
+Step-by-Step Questionnaire: A guided four-step process for collecting user inputs.
+Cost Estimation: Provides an estimated overview of MPU-related costs.
+Progress Tracking: Displays the current step and overall completion progress.
+Easy Navigation: Back and Next controls allow users to navigate through the questionnaire.
+Start Again: Reset the calculator and begin a fresh estimation.
+User-Friendly Interface: Simple and accessible estimation workflow.
+Browser-Based Access: Use the calculator directly through the live demo.
+🚀 Live Demo
 
-## Demo Disclaimer
+Try the application here:
 
-This is a demonstration project.
+👉 https://yagpath.github.io/mpu-cost-calculator-demo/
 
-The displayed costs are illustrative estimates and may differ from actual prices. The contact buttons do not submit forms, open WhatsApp, or make phone calls.
+🛠️ Getting Started
 
-## Run Locally
+To run the project locally:
 
-1. Download or clone this repository.
-2. Open the project folder.
-3. Open `index.html` in your browser.
+1. Clone the repository
+bash
+git clone https://github.com/yagpath/mpu-cost-calculator-demo.git
 
-No installation or build process is required.
+2. Navigate to the project directory
+bash
+cd mpu-cost-calculator-demo
 
-## Project Files
+3. Run the application
 
-```text
-MPU-Cost-Calculator/
-├── index.html
-├── style.css
-├── script.js
-└── dancing-monkey.gif
+If the project uses a static HTML setup, open index.html in your browser.
+
+If it uses a build tool or framework, install the required dependencies and follow the scripts defined in package.json.
+
+📋 How to Use
+Open the MPU Cost Estimator.
+Read the introductory information.
+Answer the questions presented in each step.
+Navigate through the questionnaire using the Next button.
+Use the Back button if you want to change previous answers.
+Review the estimated MPU costs.
+Select Start Again to perform another estimation.
+
+
+⚠️ Disclaimer
+
+This calculator provides approximate cost estimates for informational purposes only and are not real. Actual costs may vary depending on individual circumstances, requirements, and the providers selected.
+
+The estimates should not be considered real / final quotations or guaranteed costs. This is just an demo.
+
+
+Built to make MPU cost estimation simpler, clearer, and more accessible.
