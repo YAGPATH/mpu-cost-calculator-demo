@@ -1,62 +1,69 @@
-MPU Cost Estimator
 
-An interactive web-based calculator that helps users estimate the costs associated with their MPU through a simple, step-by-step questionnaire.
+# MPU Cost Estimator
 
-🌐 Live Demo: https://yagpath.github.io/mpu-cost-calculator-demo/
+An interactive web-based calculator designed to help users estimate MPU-related costs through a simple, guided questionnaire.
 
-📖 Overview
+## 🌐 Live Demo
 
-The MPU Cost Estimator is designed to make cost estimation easier and more transparent. Users answer a series of questions about their requirements and receive an estimated overview of the costs related to their MPU.
+[Launch MPU Cost Estimator](https://yagpath.github.io/mpu-cost-calculator-demo/)
 
-The application follows a guided, four-step process to make the estimation experience simple and user-friendly.
+## 📖 About
 
-✨ Features
-Step-by-Step Questionnaire: A guided four-step process for collecting user inputs.
-Cost Estimation: Provides an estimated overview of MPU-related costs.
-Progress Tracking: Displays the current step and overall completion progress.
-Easy Navigation: Back and Next controls allow users to navigate through the questionnaire.
-Start Again: Reset the calculator and begin a fresh estimation.
-User-Friendly Interface: Simple and accessible estimation workflow.
-Browser-Based Access: Use the calculator directly through the live demo.
-🚀 Live Demo
+MPU Cost Estimator is a web application that simplifies the cost estimation process. It guides users through a series of questions and provides an estimated cost based on their inputs.
 
-Try the application here:
+The application offers a straightforward, step-by-step experience, making it easy for users to provide the required information and understand the estimated costs.
 
-👉 https://yagpath.github.io/mpu-cost-calculator-demo/
+## ✨ Features
 
-🛠️ Getting Started
+- **Interactive Questionnaire:** Complete a guided four-step estimation process.
+- **Cost Calculation:** Get an estimated overview of MPU-related costs.
+- **Progress Tracking:** Track your progress throughout the questionnaire.
+- **Easy Navigation:** Move between steps using Back and Next controls.
+- **Reset Functionality:** Start a new estimation whenever needed.
+- **Simple Interface:** Clean and user-friendly design.
+- **Browser-Based:** Access the calculator directly without installing software.
 
-To run the project locally:
+## 🚀 Getting Started
 
-1. Clone the repository
-bash
+### Clone the Repository
+
+```bash
 git clone https://github.com/yagpath/mpu-cost-calculator-demo.git
+```
 
-2. Navigate to the project directory
-bash
+### Navigate to the Project Directory
+
+```bash
 cd mpu-cost-calculator-demo
+```
 
-3. Run the application
+### Run Locally
 
-If the project uses a static HTML setup, open index.html in your browser.
+Open the `index.html` file in your web browser if the project uses a static HTML setup.
 
-If it uses a build tool or framework, install the required dependencies and follow the scripts defined in package.json.
+If the project requires a development server or build tools, follow the instructions in its configuration files.
 
-📋 How to Use
-Open the MPU Cost Estimator.
-Read the introductory information.
-Answer the questions presented in each step.
-Navigate through the questionnaire using the Next button.
-Use the Back button if you want to change previous answers.
-Review the estimated MPU costs.
-Select Start Again to perform another estimation.
+## 📋 How to Use
+
+1. Open the [MPU Cost Estimator](https://yagpath.github.io/mpu-cost-calculator-demo/).
+2. Start the estimation process.
+3. Answer the questions in each step.
+4. Navigate between steps using the Back and Next buttons.
+5. Complete all required steps.
+6. Review your estimated MPU costs.
+7. Start again to perform another estimation.
+
+## ⚠️ Disclaimer
+
+The calculator provides **Demo** estimates for informational purposes only. Real costs may vary depending on real world individual circumstances and other relevant factors.
+
+The calculated amounts should not be considered official quotations or guaranteed costs.
 
 
-⚠️ Disclaimer
+## 📄 License
 
-This calculator provides approximate cost estimates for informational purposes only and are not real. Actual costs may vary depending on individual circumstances, requirements, and the providers selected.
+Refer to the repository for licensing information.
 
-The estimates should not be considered real / final quotations or guaranteed costs. This is just an demo.
+---
 
-
-Built to make MPU cost estimation simpler, clearer, and more accessible.
+**MPU Cost Estimator Demo — Making cost estimation simple and accessible.**
