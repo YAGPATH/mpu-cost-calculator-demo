@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #173b63;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+h2 {
+    color: #173b63;
+    margin-top: 30px;
+}
+
+form {
+    background-color: white;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+input[type="radio"] {
+    margin: 12px 8px 12px 0;
+}
+
+button {
+    background-color: #173b63;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #245582;
+}
