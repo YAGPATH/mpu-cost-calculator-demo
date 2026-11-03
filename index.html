@@ -1,39 +1,71 @@
 <html>
-  <body>
-    <link rel="stylesheet" href="style.css" />
+<body>
+
+    <link rel="stylesheet" href="style.css">
 
     <h1>MPU Cost Calculator - Demo | MPU FACHZENTRUM</h1>
 
     <p>Calculate the estimated cost of your MPU.</p>
 
-    <h2>Step 1: What is the reason for your MPU?</h2>
+    <div id="progress">
+        Step <span id="step-number">1</span> of 4
+    </div>
 
-    <form>
-      <input type="radio" name="reason" value="alcohol" />
-      Alcohol
-      <br />
+    <h2 id="question">Step 1: What is the reason for your MPU?</h2>
 
-      <input type="radio" name="reason" value="drugs" />
-      Drugs or cannabis
-      <br />
+    <form id="calculator-form">
 
-      <input type="radio" name="reason" value="points" />
-      Points
-      <br />
+        <div id="options">
 
-      <input type="radio" name="reason" value="criminal" />
-      Criminal offence
-      <br />
+            <label>
+                <input type="radio" name="reason" value="alcohol">
+                Alcohol
+            </label>
+            <br>
 
-      <input type="radio" name="reason" value="multiple" />
-      Multiple reasons
-      <br /><br />
+            <label>
+                <input type="radio" name="reason" value="drugs">
+                Drugs or cannabis
+            </label>
+            <br>
 
-      <button type="button">Next</button>
+            <label>
+                <input type="radio" name="reason" value="points">
+                Points
+            </label>
+            <br>
+
+            <label>
+                <input type="radio" name="reason" value="criminal">
+                Criminal offence
+            </label>
+            <br>
+
+            <label>
+                <input type="radio" name="reason" value="multiple">
+                Multiple reasons
+            </label>
+
+        </div>
+
+        <p id="message"></p>
+
+        <button type="button" id="back-button" disabled>
+            Back
+        </button>
+
+        <button type="button" id="next-button">
+            Next
+        </button>
+
     </form>
 
-    <p>This calculator provides an estimated cost only.</p>
+    <p>
+        This calculator provides an estimated cost only.
+        Actual costs may vary depending on your individual situation.
+    </p>
 
     <script src="script.js"></script>
-  </body>
+
+</body>
 </html>
