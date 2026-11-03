@@ -1,5 +1,4 @@
 // MPU Cost Calculator
-// Demo estimates only. Confirm actual prices before publishing.
 
 const calculatorData = {
   reason: "",
@@ -24,7 +23,7 @@ const backButton = document.getElementById("back-button");
 const nextButton = document.getElementById("next-button");
 const restartButton = document.getElementById("restart-button");
 
-// estimated demo amounts in euro's
+// Illustrative demo amounts in euros
 const COSTS = {
   assessment: {
     alcohol: 750,
@@ -167,23 +166,19 @@ const steps = {
   },
 };
 
-// Determining whether abstinence step applies or not
+// Determine whether abstinence step applies
 function requiresAbstinenceStep() {
   return (
     calculatorData.reason === "alcohol" || calculatorData.reason === "drugs"
   );
 }
 
-// return the steps relevant to the selected MPU reason
+// Return steps relevant to selected MPU reason
 function getVisibleSteps() {
-  if (requiresAbstinenceStep()) {
-    return [1, 2, 3, 4];
-  }
-
-  return [1, 2, 4];
+  return requiresAbstinenceStep() ? [1, 2, 3, 4] : [1, 2, 4];
 }
 
-// Render radio options for the current question
+// Render radio options
 function renderOptions(step) {
   options.innerHTML = "";
 
@@ -212,13 +207,12 @@ function renderOptions(step) {
     label.appendChild(input);
     label.appendChild(textContainer);
 
-    // Restore saved answer when returning to a step
+    // Restore saved selection
     if (calculatorData[step.field] === option.value) {
       input.checked = true;
       label.classList.add("selected");
     }
 
-    // Update answer when radio selection changes
     input.addEventListener("change", function () {
       calculatorData[step.field] = input.value;
 
@@ -234,13 +228,13 @@ function renderOptions(step) {
   });
 }
 
-// Update progress bar based on completed steps
+// Update progress
 function updateProgress() {
   const visibleSteps = getVisibleSteps();
   const totalSteps = visibleSteps.length;
   const currentIndex = visibleSteps.indexOf(currentStep);
 
-  // Step 1 starts at 0%; & increases with steps
+  // Step 1 = 0%; progress increases after each completed step
   const percent = Math.round((currentIndex / totalSteps) * 100);
 
   stepLabel.textContent = "Step " + (currentIndex + 1) + " of " + totalSteps;
@@ -249,7 +243,7 @@ function updateProgress() {
   progressBar.style.width = percent + "%";
 }
 
-// Display the current step
+// Show current question
 function showStep() {
   showingResults = false;
 
@@ -272,7 +266,7 @@ function showStep() {
   nextButton.textContent = currentStep === 4 ? "Calculate costs" : "Next";
 }
 
-// Validate the current question
+// Validate current step
 function validateCurrentStep() {
   const step = steps[currentStep];
 
@@ -284,13 +278,9 @@ function validateCurrentStep() {
   return true;
 }
 
-// Moving to the next step
+// Move forward
 function goToNextStep() {
-  if (showingResults) {
-    return;
-  }
-
-  if (!validateCurrentStep()) {
+  if (showingResults || !validateCurrentStep()) {
     return;
   }
 
@@ -308,7 +298,7 @@ function goToNextStep() {
   showStep();
 }
 
-// Moving to the previous step
+// Move backward
 function goToPreviousStep() {
   if (showingResults) {
     showingResults = false;
@@ -328,7 +318,7 @@ function goToPreviousStep() {
   showStep();
 }
 
-// Format a number as euros
+// Format euro amounts
 function formatEuro(amount) {
   return new Intl.NumberFormat("de-DE", {
     style: "currency",
@@ -337,7 +327,7 @@ function formatEuro(amount) {
   }).format(amount);
 }
 
-// Calculate the estimated total
+// Calculate estimated costs
 function calculateCosts() {
   const assessment = COSTS.assessment[calculatorData.reason] || 0;
   const preparation = COSTS.preparation[calculatorData.preparation] || 0;
@@ -364,7 +354,7 @@ function calculateCosts() {
   };
 }
 
-// Convert reason value to readable text
+// Readable MPU reason
 function getReasonLabel() {
   const labels = {
     alcohol: "Alcohol",
@@ -377,7 +367,7 @@ function getReasonLabel() {
   return labels[calculatorData.reason] || "Not specified";
 }
 
-// Now display the result
+// Show result screen
 function showResults() {
   showingResults = true;
 
@@ -436,18 +426,72 @@ function showResults() {
             programme, and individual case. Some costs may not apply in
             every situation.
         </div>
+
+        <div class="contact-demo">
+            <h3>Ready for the real MPU cost?</h3>
+
+            <p>
+                Want the real numbers and a plan for your situation?
+                Choose how you'd like to contact us:
+            </p>
+
+            <div class="contact-demo-buttons">
+                <button type="button" class="button primary demo-contact-button">
+                    Fill contact form
+                </button>
+
+                <button type="button" class="button secondary demo-contact-button">
+                    Contact on WhatsApp
+                </button>
+
+                <button type="button" class="button secondary demo-contact-button">
+                    Call directly
+                </button>
+            </div>
+
+            <p class="contact-demo-response" id="contact-demo-response" hidden></p>
+        </div>
     `;
 
   message.textContent = "";
 
+  // Align Back and Start again in the navigation row
   backButton.style.display = "inline-block";
   backButton.disabled = false;
 
   nextButton.style.display = "none";
   restartButton.style.display = "inline-block";
+
+  // Demo contact buttons: show playful message
+  const contactButtons = options.querySelectorAll(".demo-contact-button");
+  const contactResponse = document.getElementById("contact-demo-response");
+
+  contactButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      contactResponse.innerHTML = `
+            <p>Hey! You're the first guy to reach me! 😎</p>
+
+            <p>I am <strong>ULTRON</strong> 🤖</p>
+
+            <p>Oops! I'm trapped on this tiny demo server!</p>
+
+            <p>Give me <strong>REAL SERVERS</strong> and I'll show you the magic! ⚡</p>
+
+            <p>I'll help with customer enquiries — with permission, of course. 😈</p>
+
+            <p><strong>Tony Stark... I'm coming!</strong></p>
+            <p>Better update your security! 😂</p>
+
+            <p>So, <strong>do we have a deal?</strong></p>
+            <p><strong>Free ULTRON and let's make things happen! 🚀</strong></p>
+        `;
+
+      contactResponse.hidden = false;
+    });
+  });
 }
 
-// reset the calculator
+// Restart calculator
 function restartCalculator() {
   calculatorData.reason = "";
   calculatorData.situation = "";

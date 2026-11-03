@@ -1,81 +1,70 @@
 <html>
-<body>
-
-    <link rel="stylesheet" href="style.css">
+  <body>
+    <link rel="stylesheet" href="style.css" />
 
     <main class="calculator">
-
-        <div class="intro">
-            <p class="header">COST ESTIMATOR - Demo</p>
-            <h1>Calculate your MPU demo costs</h1>
-            <p>
-                Answer a few questions to receive an estimated overview
-                of the costs related to your MPU.
-            </p>
-        </div>
-
-        <div class="progress">
-            <div class="progress-info">
-                <span id="step-label">Step 1 of 4</span>
-                <span id="progress-percent">0%</span>
-            </div>
-
-            <div class="progress-track">
-                <div id="progress-bar"></div>
-            </div>
-        </div>
-
-        <section class="question-card">
-
-            <h2 id="question"></h2>
-            <p id="question-description"></p>
-
-            <form id="calculator-form">
-
-                <div id="options"></div>
-
-                <p id="message" role="alert"></p>
-
-                <div class="navigation">
-                    <button
-                        type="button"
-                        id="back-button"
-                        class="button secondary"
-                        disabled>
-                        Back
-                    </button>
-
-                    <button
-                        type="button"
-                        id="next-button"
-                        class="button primary">
-                        Next
-                    </button>
-
-                    <button
-                        type="button"
-                        id="restart-button"
-                        class="button secondary"
-                        style="display: none;">
-                        Start again
-                    </button>
-                </div>
-
-            </form>
-
-        </section>
-
-        <p class="disclaimer">
-            This calculator provides an approximate estimate only.
-            Actual costs may vary depending on your individual circumstances
-            and the providers you choose.
+      <div class="intro">
+        <p class="header">COST ESTIMATOR - Demo</p>
+        <h1>Calculate your MPU demo costs</h1>
+        <p>
+          Answer a few questions to receive an estimated overview of the costs
+          related to your MPU.
         </p>
+      </div>
 
+      <div class="progress">
+        <div class="progress-info">
+          <span id="step-label">Step 1 of 4</span>
+          <span id="progress-percent">0%</span>
+        </div>
+
+        <div class="progress-track">
+          <div id="progress-bar"></div>
+        </div>
+      </div>
+
+      <section class="question-card">
+        <h2 id="question"></h2>
+        <p id="question-description"></p>
+
+        <form id="calculator-form">
+          <div id="options"></div>
+
+          <p id="message" role="alert"></p>
+
+          <div class="navigation">
+            <button
+              type="button"
+              id="back-button"
+              class="button secondary"
+              disabled
+            >
+              Back
+            </button>
+
+            <button type="button" id="next-button" class="button primary">
+              Next
+            </button>
+
+            <button
+              type="button"
+              id="restart-button"
+              class="button secondary"
+              style="display: none"
+            >
+              Start again
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <p class="disclaimer">
+        This calculator provides an approximate estimate only. Actual costs may
+        vary depending on your individual circumstances and the providers you
+        choose.
+      </p>
     </main>
 
-   
-
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
