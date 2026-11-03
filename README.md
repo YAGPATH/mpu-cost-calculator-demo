@@ -1,6 +1,6 @@
 # MPU Cost Calculator Demo
 
-A simple interactive MPU cost calculator created for **MPU-FACHZENTRUM**.
+A simple interactive MPU cost calculator created to get mpu cost demo.
 
 This demo helps users estimate possible MPU-related expenses based on their situation, preparation needs, and abstinence evidence.
 
